@@ -69,21 +69,28 @@ document.getElementById("justify").addEventListener("click", function () {
   }
 });
 
-document.getElementById("font-size").addEventListener("click", function () {
+document.getElementById("font-size").addEventListener("input", function () {
   const input = document.getElementById("input");
   const fontSize = document.getElementById("font-size");
   const fontSizeValue = fontSize.value;
   input.style.fontSize = fontSizeValue + "px";
+  input.style.lineHeight = (fontSizeValue * 1.4) + "px";
 });
 
 document.getElementById("alphabet").addEventListener("click", function () {
   const input = document.getElementById("input");
-  if (input.style.textTransform === "uppercase") {
-    input.style.textTransform = "lowercase";
-    alphabet.style.backgroundColor = "transparent";
-  } else {
+  const computedStyle = window.getComputedStyle(input);
+  const currentTransform = computedStyle.textTransform;
+  if (currentTransform === "none") {
     input.style.textTransform = "uppercase";
+    alphabet.style.backgroundColor = "DeepSkyBlue";
+  } else if(currentTransform === "uppercase"){
+    input.style.textTransform = "lowercase";
     alphabet.style.backgroundColor = "DarkTurquoise";
+  }
+  else {
+    input.style.textTransform = "none";
+    alphabet.style.backgroundColor = "transparent";
   }
 });
 
