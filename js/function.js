@@ -3,9 +3,11 @@ document.getElementById("bold").addEventListener("click", function () {
   if (input.style.fontWeight === "bold") {
     input.style.fontWeight = "normal";
     bold.style.backgroundColor = "transparent";
+    bold.style.color = "black";
   } else {
     input.style.fontWeight = "bold";
-    bold.style.backgroundColor = "DarkTurquoise";
+    bold.style.backgroundColor = "purple";
+    bold.style.color = "white";
   }
 });
 document.getElementById("italic").addEventListener("click", function () {
@@ -13,9 +15,11 @@ document.getElementById("italic").addEventListener("click", function () {
   if (input.style.fontStyle === "italic") {
     input.style.fontStyle = "normal";
     italic.style.backgroundColor = "transparent";
+    italic.style.color = "black";
   } else {
     input.style.fontStyle = "italic";
-    italic.style.backgroundColor = "DarkTurquoise";
+    italic.style.backgroundColor = "purple";
+    italic.style.color = "white";
   }
 });
 document.getElementById("underline").addEventListener("click", function () {
@@ -23,9 +27,11 @@ document.getElementById("underline").addEventListener("click", function () {
   if (input.style.textDecoration === "underline") {
     input.style.textDecoration = "none";
     underline.style.backgroundColor = "transparent";
+    underline.style.color = "black";
   } else {
     input.style.textDecoration = "underline";
-    underline.style.backgroundColor = "DarkTurquoise";
+    underline.style.backgroundColor = "purple";
+    underline.style.color = "white";
   }
 });
 document.getElementById("left").addEventListener("click", function () {
@@ -33,9 +39,17 @@ document.getElementById("left").addEventListener("click", function () {
   if (input.style.textAlign === "left") {
     input.style.textAlign = "justify";
     left.style.backgroundColor = "transparent";
+    left.style.color = "black";
   } else {
     input.style.textAlign = "left";
-    left.style.backgroundColor = "DarkTurquoise";
+    left.style.backgroundColor = "purple";
+    center.style.backgroundColor = "transparent";
+    right.style.backgroundColor = "transparent";
+    justify.style.backgroundColor = "transparent";
+    center.style.color = "black";
+    right.style.color = "black";
+    justify.style.color = "black";
+    left.style.color = "white";
   }
 });
 document.getElementById("center").addEventListener("click", function () {
@@ -43,9 +57,17 @@ document.getElementById("center").addEventListener("click", function () {
   if (input.style.textAlign === "center") {
     input.style.textAlign = "initial";
     center.style.backgroundColor = "transparent";
+    center.style.color = "black";
   } else {
     input.style.textAlign = "center";
-    center.style.backgroundColor = "DarkTurquoise";
+    center.style.backgroundColor = "purple";
+    left.style.backgroundColor = "transparent";
+    right.style.backgroundColor = "transparent";
+    justify.style.backgroundColor = "transparent";
+    left.style.color = "black";
+    right.style.color = "black";
+    justify.style.color = "black";
+    center.style.color = "white";
   }
 });
 document.getElementById("right").addEventListener("click", function () {
@@ -53,9 +75,17 @@ document.getElementById("right").addEventListener("click", function () {
   if (input.style.textAlign === "right") {
     input.style.textAlign = "initial";
     right.style.backgroundColor = "transparent";
+    right.style.color = "black";
   } else {
     input.style.textAlign = "right";
-    right.style.backgroundColor = "DarkTurquoise";
+    right.style.backgroundColor = "purple";
+    left.style.backgroundColor = "transparent";
+    center.style.backgroundColor = "transparent";
+    justify.style.backgroundColor = "transparent";
+    left.style.color = "black";
+    center.style.color = "black";
+    justify.style.color = "black";
+    right.style.color = "white";
   }
 });
 document.getElementById("justify").addEventListener("click", function () {
@@ -63,9 +93,17 @@ document.getElementById("justify").addEventListener("click", function () {
   if (input.style.textAlign === "justify") {
     input.style.textAlign = "initial";
     justify.style.backgroundColor = "transparent";
+    justify.style.color = "black";
   } else {
     input.style.textAlign = "justify";
-    justify.style.backgroundColor = "DarkTurquoise";
+    justify.style.backgroundColor = "purple";
+    left.style.backgroundColor = "transparent";
+    right.style.backgroundColor = "transparent";
+    center.style.backgroundColor = "transparent";
+    left.style.color = "black";
+    right.style.color = "black";
+    center.style.color = "black";
+    justify.style.color = "white";
   }
 });
 
@@ -74,7 +112,7 @@ document.getElementById("font-size").addEventListener("input", function () {
   const fontSize = document.getElementById("font-size");
   const fontSizeValue = fontSize.value;
   input.style.fontSize = fontSizeValue + "px";
-  input.style.lineHeight = (fontSizeValue * 1.4) + "px";
+  input.style.lineHeight = fontSizeValue * 1.4 + "px";
 });
 
 document.getElementById("alphabet").addEventListener("click", function () {
@@ -83,14 +121,16 @@ document.getElementById("alphabet").addEventListener("click", function () {
   const currentTransform = computedStyle.textTransform;
   if (currentTransform === "none") {
     input.style.textTransform = "uppercase";
-    alphabet.style.backgroundColor = "DeepSkyBlue";
-  } else if(currentTransform === "uppercase"){
+    alphabet.style.backgroundColor = "purple";
+    alphabet.style.color = "white";
+  } else if (currentTransform === "uppercase") {
     input.style.textTransform = "lowercase";
-    alphabet.style.backgroundColor = "DarkTurquoise";
-  }
-  else {
+    alphabet.style.backgroundColor = "purple";
+    alphabet.style.color = "white";
+  } else {
     input.style.textTransform = "none";
     alphabet.style.backgroundColor = "transparent";
+    alphabet.style.color = "black";
   }
 });
 

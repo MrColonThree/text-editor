@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Text Editor</title>
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -16,69 +16,92 @@
   </head>
   <body>
     <section
-      class="w-full md:w-3/4 mx-auto bg-sky-300 mt-10 px-10 md:px-20 py-10"
+      class="w-full md:w-3/4 mx-auto bg-[#800080] mt-10 px-10 md:px-20 py-10"
     >
-      <h1 class="text-4xl font-semibold text-center mb-5">My Text Editor</h1>
-      <div class="bg-sky-200 p-5 border-2 border-black">
-        <div
-          class="flex flex-col md:flex-row flex-wrap justify-center lg:justify-between items-center mb-6 pb-4 border-b-2 border-black gap-3"
-        >
-          <div class="flex gap-3 items-center">
-            <button id="bold" class="hover:bg-sky-500 px-2 py-1 rounded-lg">
-              <i class="fa-solid fa-bold"></i>
-            </button>
-            <button id="italic" class="hover:bg-sky-500 px-2 py-1 rounded-lg">
-              <i class="fa-solid fa-italic"></i>
-            </button>
-            <button
-              id="underline"
-              class="hover:bg-sky-500 px-2 py-1 rounded-lg"
-            >
-              <i class="fa-solid fa-underline"></i>
-            </button>
+      <h1 class="text-4xl font-semibold text-center text-white mb-5">
+        My Text Editor
+      </h1>
+      <div class="bg-white">
+        <div class="bg-[#FFC300] bg-opacity-60 p-5 border-2 border-white">
+          <div
+            class="flex flex-col md:flex-row flex-wrap justify-center lg:justify-between items-center mb-6 pb-4 border-b-2 border-black gap-3"
+          >
+            <div class="flex gap-3 items-center">
+              <button
+                id="bold"
+                class="hover:bg-[#800080] hover:text-white px-2 py-1 rounded-lg"
+              >
+                <i class="fa-solid fa-bold"></i>
+              </button>
+              <button
+                id="italic"
+                class="hover:bg-[#800080] hover:text-white px-2 py-1 rounded-lg"
+              >
+                <i class="fa-solid fa-italic"></i>
+              </button>
+              <button
+                id="underline"
+                class="hover:bg-[#800080] hover:text-white px-2 py-1 rounded-lg"
+              >
+                <i class="fa-solid fa-underline"></i>
+              </button>
+            </div>
+            <div class="flex gap-3 items-center md:mx-12">
+              <button
+                id="left"
+                class="hover:bg-[#800080] hover:text-white px-2 py-1 rounded-lg"
+              >
+                <i class="fa-solid fa-align-left"></i>
+              </button>
+              <button
+                id="center"
+                class="hover:bg-[#800080] hover:text-white px-2 py-1 rounded-lg"
+              >
+                <i class="fa-solid fa-align-center"></i>
+              </button>
+              <button
+                id="right"
+                class="hover:bg-[#800080] hover:text-white px-2 py-1 rounded-lg"
+              >
+                <i class="fa-solid fa-align-right"></i>
+              </button>
+              <button
+                id="justify"
+                class="hover:bg-[#800080] hover:text-white px-2 py-1 rounded-lg"
+              >
+                <i class="fa-solid fa-align-justify"></i>
+              </button>
+            </div>
+            <div class="flex gap-3 items-center">
+              <input
+                id="font-size"
+                class="w-12 outline-none rounded-lg text-white text-lg text-center bg-[#800080]"
+                value="16"
+                type="number"
+              />
+              <button
+                id="alphabet"
+                class="text-xl hover:bg-[#800080] hover:text-white px-2 py-1 rounded-lg"
+              >
+                aA
+              </button>
+              <input
+                id="color"
+                class="cursor-pointer"
+                type="color"
+                name=""
+                value="#000000"
+              />
+            </div>
           </div>
-          <div class="flex gap-3 items-center md:mx-12">
-            <button id="left" class="hover:bg-sky-500 px-2 py-1 rounded-lg">
-              <i class="fa-solid fa-align-left"></i>
-            </button>
-            <button id="center" class="hover:bg-sky-500 px-2 py-1 rounded-lg">
-              <i class="fa-solid fa-align-center"></i>
-            </button>
-            <button id="right" class="hover:bg-sky-500 px-2 py-1 rounded-lg">
-              <i class="fa-solid fa-align-right"></i>
-            </button>
-            <button id="justify" class="hover:bg-sky-500 px-2 py-1 rounded-lg">
-              <i class="fa-solid fa-align-justify"></i>
-            </button>
-          </div>
-          <div class="flex gap-3 items-center">
-            <input
-              id="font-size"
-              class="w-12 outline-none rounded-lg text-lg text-center bg-sky-400"
-              value="16"
-              type="number"
-            />
-            <button
-              id="alphabet"
-              class="text-xl hover:bg-sky-500 px-2 py-1 rounded-lg"
-            >
-              aA
-            </button>
-            <input
-              id="color"
-              class="cursor-pointer"
-              type="color"
-              name=""
-              value="#000000"
-            />
-          </div>
+          <textarea
+            class="w-full mx-auto p-2 text-base h-[50vh]"
+            name=""
+            id="input"
+            rows=""
+            placeholder="Write your text here..."
+          ></textarea>
         </div>
-        <textarea
-          class="w-full mx-auto p-2 text-base h-[50vh]"
-          name=""
-          id="input"
-          rows="" placeholder="Write your text here..."
-        ></textarea>
       </div>
       <div class="flex flex-row-reverse mt-5">
         <button
