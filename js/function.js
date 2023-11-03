@@ -161,6 +161,14 @@ document.getElementById("reset").addEventListener("click", function () {
   right.style.backgroundColor = "transparent";
   justify.style.backgroundColor = "transparent";
   alphabet.style.backgroundColor = "transparent";
+  bold.style.color = "black";
+  italic.style.color = "black";
+  underline.style.color = "black";
+  left.style.color = "black";
+  center.style.color = "black";
+  right.style.color = "black";
+  justify.style.color = "black";
+  alphabet.style.color = "black";
   const colorInput = document.getElementById("color");
   colorInput.value = "#000000";
 });
